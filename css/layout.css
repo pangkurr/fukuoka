@@ -1,0 +1,781 @@
+/******************************** 
+  css/layout.css
+********************************/
+
+/* fonts.css 추가 */
+@import url(../css/fonts.css);
+
+/* 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #444;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+/* 헤더 고정, 너비 15%, 최대너비 300px */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 15%;
+  max-width: 300px;
+  height: 100%;
+}
+
+/* nav 상대위치, 높이30px
+너비 85% */
+nav {
+  display: block;
+  width: 85%;
+  height: 30px;
+  position: relative;
+  left: 15%;
+}
+
+/******************************** 
+  모듈
+********************************/
+
+/* 모듈그룹 컨테이너는 상대위치 */
+.container {
+  position: relative;
+  left: 15%;
+  width: 85%;
+}
+
+/* 모듈 설정
+  -가로배치
+  -기본 높이: 250px;
+*/
+.mo {
+  float: left;
+  height: 250px;
+  overflow: hidden;
+}
+
+/* 1행 높이 600px*/
+.m1 {
+  width: 100%;
+  height: 600px;
+}
+
+/* 2행 */
+.m2 {
+  width: 60%;
+  height: 250px;
+}
+
+.m3 {
+  width: 20%;
+  height: 250px;
+}
+
+.m4 {
+  width: 20%;
+  height: 250px;
+}
+
+/* 3행 */
+.m5 {
+  width: 20%;
+  height: 500px;
+}
+
+.m6 {
+  width: 40%;
+  height: 250px;
+}
+
+.m7 {
+  width: 40%;
+  height: 250px;
+}
+
+/* 4행 */
+.m8 {
+  width: 20%;
+  height: 250px;
+}
+
+.m9 {
+  width: 20%;
+  height: 250px;
+}
+
+.m10 {
+  width: 40%;
+  height: 250px;
+}
+
+/* 
+ 상대위치, 크기는 부모 요소에 맞추기
+*/
+
+.mo>div {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+/******************************** 
+  헤더 Fukuoka
+********************************/
+#logo {
+  background-image: url(../images/blossom_logo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  margin-left: -100px;
+}
+
+/*  */
+#gnb {
+  position: absolute;
+  top: 250px;
+}
+
+/* 글씨 진하게, 내부여백:상하10px, 좌우30px */
+#gnb li a {
+  display: block;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px 30px;
+}
+
+/* 기본 글자 크기만큼 우측 여백 */
+#gnb li a i {
+  margin-right: 1rem;
+}
+
+/* hover시 글자색 초록계열, 커서는 포인터로 */
+#gnb li a:hover,
+#gnb li a:hover i {
+  color: rgb(50, 120, 100);
+  cursor: pointer;
+}
+
+
+/* 
+  절대위치, 위로 100px
+  너비 120px;
+*/
+.sns {
+  width: 120px;
+  position: absolute;
+  bottom: 100px;
+  right: 50%;
+  margin-right: -60px;
+}
+
+/* 가로 배치 */
+.sns a {
+  float: left;
+  display: block;
+}
+
+/* 너비 50%, 대문자화, 글꼴은 Arial,Helvetica */
+.sns .stxt {
+  text-transform: uppercase;
+  width: 50%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+
+/* 너비 30px 글자크기 30px */
+.sns .icon {
+  width: 30px;
+  font-size: 30px;
+}
+
+.sns .icon:nth-child(3):hover i {
+  color: rgb(70, 70, 230);
+}
+
+.sns .icon:nth-child(4):hover i {
+  color: pink;
+}
+
+.sns .icon:nth-child(5):hover i {
+  color: rgb(100, 220, 250);
+}
+
+.sns .icon:nth-child(6):hover i {
+  color: rgb(230, 70, 70);
+}
+
+/* 
+  절대위치, 5px 아래로 이동
+  글자 색상: #eee
+  글꼴: Arial, Helvetica
+   */
+
+nav {
+  background-color: black;
+}
+
+nav a {
+  position: absolute;
+  top: 5px;
+  color: #eee;
+  font-family: Arial, Helvetica;
+  font-style: italic;
+}
+
+/* 좌우 위치: 20px, 100px 
+  Event 위치: 좌로 120px
+*/
+nav a:nth-child(1) {
+  left: 20px;
+}
+
+nav a:nth-child(2) {
+  left: 120px;
+}
+
+nav a:nth-child(3) {
+  right: 100px;
+}
+
+nav a:nth-child(4) {
+  right: 20px;
+}
+
+/******************************** 
+  컨테이너
+********************************/
+
+/* .bg 에 배경 이미지 삽입 */
+.bg1 {
+  background-image: url('../images/fuku_1.jpg');
+}
+
+.bg2 {
+  background-image: url('../images/fuku_2.jpg');
+}
+
+.bg4 {
+  background-image: url('../images/fuku_3.jpg');
+}
+
+
+.bg6 {
+  background-image: url('../images/fuku_4.jpg');
+}
+
+.bg8 {
+  background-image: url('../images/fuku_5.jpg');
+}
+
+.bg10 {
+  background-image: url('../images/fuku_6.jpg');
+}
+
+/* 배경 이미지 크기 및 위치 조정 */
+.bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/*
+ bg 내부 text(span) 설정
+ 기본 글자 크기의 5 배 
+ 아래 기준 0
+ 투명하게
+*/
+.bg span {
+  font-size: 4rem;
+  position: absolute;
+  color: white;
+  bottom: 0;
+}
+
+.bg span {
+  right: -150%;
+}
+
+/* 
+호버시 
+통통 튀는 animation 적용
+진행시간 2s 1번만 마지막 상태 유지.
+ */
+.mo:hover .bg span {
+  animation-name: tongtong;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes tongtong {
+  0% {
+    right: -150%;
+  }
+
+  40% {
+    right: 50px;
+  }
+
+  50% {
+    right: 0px;
+  }
+
+  60% {
+    right: 30px;
+  }
+
+  70% {
+    right: 20px;
+  }
+
+  100% {
+    right: 10px;
+  }
+
+}
+
+/* 
+  메인 모듈 설정
+  기본글자 크기의 10배
+  위로 50px 오른쪽 50px
+  글자색:#eee;
+
+*/
+.bg1 strong {
+  position: absolute;
+  bottom: 0;
+  right: 50px;
+  font-size: 10rem;
+  color: #eee;
+}
+
+/* 텍스트 모듈 공통*/
+/* 
+  배경색:흰색, 글자색 #555
+  내부여백: 상하좌우 30px
+*/
+.txt {
+  background-color: #eee;
+  color: #555;
+  padding: 30px;
+}
+
+/* 
+  기본 글자 크기의 2.5배
+  글자 두께는 normal
+  */
+.txt strong {
+  font-size: 2rem;
+  color: #444;
+  font-weight: normal;
+}
+
+/* 기본 글자크기 12배
+    절대위치, 오른쪽 0 아래 0
+    아이콘 숨길위치 오른쪽 -100%
+    투명하게
+    글자색 : #ffc0ce;
+  */
+.txt i {
+  font-size: 12rem;
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  right: -100%;
+  color: #ffc0ce;
+}
+
+/* 텍스트 모듈 호버 효과 */
+/* 
+    배경색: #000000
+    글자색: 흰색
+  */
+.mo:hover .txt {
+  background-color: #444444;
+  color: #eee;
+}
+
+/* 글자색: 흰색 */
+.mo:hover .txt strong,
+.mo:hover .txt em {
+  color: #eee;
+}
+
+/* m5 글자색:#ff90a3 */
+.mo:hover:nth-child(5) .txt,
+.mo:hover:nth-child(5) .txt strong,
+.mo:hover:nth-child(5) .txt em {
+  color: #ff90a3;
+}
+
+/* 오른쪽 기준 0, 반투명 */
+.mo:hover .txt i {
+  right: 0;
+  opacity: 0.5;
+}
+
+/* 일부 텍스트 모듈 재설정 */
+.mo:nth-child(5) .txt {
+  background-color: #ededed;
+}
+
+/* 모듈 3 아이콘 재설정 
+  아래로 40px, 오른쪽으로 20px
+  글자색: 흰색
+  기본 글자 크기의 15배
+  불투명도 0.7
+*/
+.mo:nth-child(5) .txt i {
+  position: absolute;
+  right: -20px;
+  bottom: -40px;
+  color: #ffc0ce;
+  font-size: 15rem;
+  opacity: 0.7;
+}
+
+/******************************** 
+  전환 효과 및 모션
+********************************/
+/* 전환시간 0.6초 */
+header,
+nav,
+.mo,
+#gnb a,
+#gnb a i {
+  transition: all 0.6s;
+}
+
+/* 
+  텍스트모듈
+  전환시간 0.6초 
+*/
+.txt,
+.txt strong,
+.txt em .txt span {
+  transition: 0.6s;
+}
+
+/* 전환시간 0.8초 */
+.txt i {
+  transition: 0.8s;
+}
+
+/* 키프레임 zoom
+  0 ~ 100%로 확대
+*/
+@keyframes zoom {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* zoom 1초 적용(한번만 실행) */
+.mo {
+  animation-name: zoom;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+/* 전환시간: 0.6초 */
+.mo .bg1 span {
+  transition: all 0.6s;
+}
+
+/*  bg1 호버시 글자 크기
+  scale(0.8)~sclae(1.1) 번갈아가기
+
+  키프레임 heartbeat 
+  0 ~ 50% 확대
+*/
+@keyframes heartbeat {
+  0% {
+    transform: scale(0.9);
+    text-shadow: 1px 1px 1px aqua, 0px 0px 1.5rem skyblue;
+  }
+
+  10% {
+    transform: scale(1.1);
+    text-shadow: 0px 0px 1px aqua, 0px 0px 2rem skyblue;
+  }
+
+  20% {
+    transform: scale(0.9);
+    text-shadow: 0px 0px 2px aqua, 0px 0px 2.5rem skyblue;
+  }
+
+  30% {
+    transform: scale(1.1);
+    text-shadow: 0px 0px 2.5px aqua, 0px 0px 2.5rem skyblue;
+  }
+
+  40% {
+    transform: scale(0.9);
+    text-shadow: 0px 0px 1px aqua, 0px 0px 2rem skyblue;
+  }
+
+  50% {
+    transform: scale(1);
+    text-shadow: 1px 1px 1px aqua, 0px 0px 1.5rem skyblue;
+  }
+}
+
+/* 기본 트랜스폼 scale(0) */
+.mo .bg1 strong::before {
+  transform: scale(0);
+}
+
+/* mo m1 메인 text 호버시 애니메이션 적용 */
+.mo .bg1:hover strong {
+  animation: heartbeat 1.5s infinite ease-in;
+}
+
+/******************************** 
+  반응형 - 미디어쿼리
+********************************/
+/* 화면 너비 1200px 이하에서 적용 */
+@media screen and (max-width:1200px) {
+
+  /* 상대위치, 너비 100%, 높이 80px */
+  header {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    max-width: 100%;
+  }
+
+  /* nav 제거 */
+  nav {
+    display: none;
+  }
+
+  /* 너비 100% */
+  .container {
+    width: 100%;
+    left: 0;
+  }
+
+  /* 
+  logo 변경
+  너비 150px 왼쪽 0 아래로 20px
+  왼쪽 여백 20px;
+ */
+  #logo {
+    background-image: url('../images/blossom_logo.png');
+    left: 0;
+    top: 20px;
+    margin-left: 20px;
+    width: 50px;
+  }
+
+  /* 왼쪽으로 300px */
+  #gnb {
+    top: 20px;
+    right: 0;
+  }
+
+  /* 가로 배치, 너비 200px */
+  #gnb li {
+    float: left;
+  }
+
+  /* sns icon 삭제 */
+  .sns {
+    display: none;
+  }
+
+  /* 모듈 크기 재설정 */
+  .m2 {
+    width: 70%;
+  }
+
+  .m3 {
+    display: none;
+  }
+
+  .m4 {
+    display: none;
+  }
+
+  .m5 {
+    width: 30%;
+    height: 250px;
+  }
+
+  .m6 {
+    width: 50%;
+  }
+
+  .m7 {
+    width: 50%;
+  }
+
+  .m8 {
+    width: 33.3%;
+  }
+
+  .m9 {
+    width: 33.3%;
+  }
+
+  .m10 {
+    width: 33.3%;
+  }
+}
+
+/* 화면 너비 480px 이하에서 적용 */
+@media screen and (max-width:812px) {
+
+  /* 
+  헤더 고정 
+  높이 160px
+  투명 배경
+  z-index 50
+  */
+  header {
+    position: absolute;
+    top: 50px;
+    height: 160px;
+    background-color: transparent;
+    z-index: 50;
+  }
+
+  /*
+  너비 200px 높이 50px
+  아래로 100px
+  가운데정렬
+  로고 크기는 4배 확대
+*/
+  #logo {
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    margin-left: -100px;
+    background-image: url(../images/blossom_logo.png);
+    transform: scale(3);
+    top: 100px;
+    position: relative;
+  }
+  #logo:after{
+    content: 'Fukuoka';
+    position: absolute;
+    left:100%;
+    color:#fff;
+    font-size: 1rem;
+  }
+
+  /* 
+  상대 위치, 너비는 50% 높이는 40px
+  가운데 정렬, 아래로 400px 
+*/
+  #gnb {
+    position: relative;
+    display: block;
+    width: 50%;
+    height: 40px;
+    margin: 0 auto;
+    top: 500px;
+  }
+#gnb li:nth-child(4){
+  display: none;
+}
+  /* 
+  float 제거
+  너비 100%
+  상하 여백 20px 
+ */
+  #gnb li {
+    float: none;
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  /* 
+  배경 흰색
+  글자 검은색
+  불투명도 0.8
+  둥근 직사각형 50px
+  padding 상하 10px 좌우 20px
+  글자 왼쪽정렬
+*/
+  #gnb li a {
+    display: block;
+    background-color: #eee;
+    color: black;
+    opacity: 0.8;
+    border-radius: 50px;
+    padding: 10px 20px;
+    text-align: left;
+  }
+
+  /* 
+    li 오버시 불투명도1,
+    크기는 1.1배
+  */
+  #gnb li:hover a {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  /* 
+  inline 배열
+  기본 글자 크기의 1.5배
+  margin 상하 0 좌우 1rem씩 
+  */
+  #gnb li a i {
+    display: inline;
+    font-size: 1.5rem;
+    margin: 0 1rem;
+  }
+
+  /* 모듈 제거 */
+  .container .mo {
+    display: none;
+  }
+
+  /* 배경 모듈 지정 */
+  .container .m1 {
+    display: inline-block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* 배경이 된 모듈 텍스트 제거 */
+  .container .m1 strong {
+    display: none;
+  }
+
+  /* 애니메이션 제거 */
+  .container .mo {
+    animation: none;
+  }
+
+  /* 
+  fonts.css에 작성한 subBar,help
+  서브바,헬프 아이콘 보이기
+*/
+  .sub_icon {
+    display: block;
+  }
+}

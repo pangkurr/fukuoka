@@ -1,0 +1,61 @@
+/********************************* 
+  css/fonts.css
+*********************************/
+/*********************************
+* 개요
+ 기본 글꼴: 구글 웹폰트 사용
+ -영문: Poiret One
+ -한글: Noto Sans KR
+
+ 기본 글자 크기: 16px
+ 기본 행간: 150%
+ 기본 글자 색상: #333
+*********************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Poiret+One&display=swap');
+
+* {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  font-family: 'Poiret One', 'Noto Sans KR', sans-serif;
+}
+
+/* 서브bars icons */
+/* 일반글자크기 2배, 너비 30px 높이 30px */
+.sub_icon {
+  display: none;
+  font-size: 2rem;
+  width: 30px;
+  height: 30px;
+
+}
+
+/* 아이콘 공통
+  -글자색은 흰색
+  -절대위치
+  -커서는 포인터
+*/
+.sub_icon i {
+  color: white;
+  position: absolute;
+  cursor: pointer;
+}
+
+/* 
+  햄버거 아이콘
+  아래로 10px 오른쪽으로 20px
+*/
+.sub_icon i:nth-child(1) {
+  top: 10px;
+  left: 20px;
+}
+
+/* 
+  물음표 아이콘
+  아래로 10px 왼쪽으로 20px
+*/
+.sub_icon i:nth-child(2) {
+  top: 10px;
+  right: 20px;
+}
