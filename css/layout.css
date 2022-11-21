@@ -32,6 +32,7 @@ header {
   width: 15%;
   max-width: 300px;
   height: 100%;
+  box-shadow: 1px 1px 2px 0px #555;
 }
 
 /* nav 상대위치, 높이30px
@@ -778,4 +779,106 @@ nav,
   .sub_icon {
     display: block;
   }
+}
+
+/* login.html */
+#login_wrap {
+  position: relative;
+  width:85%;
+  height:85vh;
+  left:15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#login_wrap .login_form{
+  width:600px;
+  height: 400px;
+}
+
+#login_wrap .login_form form h2{
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+#login_wrap .login_form form input {
+  width:100%;
+  height:50px;
+  color:#000;
+  font-weight: bold;
+  padding-left:15px;
+  font-family: sans-serif;
+  margin-bottom:15px;
+}
+#login_wrap .login_form form input[type="submit"]{
+  background: transparent;
+  letter-spacing: 1px;
+}
+#login_wrap .login_form form input[type="submit"]:hover{
+  background: #222;
+  color:#fff;
+}
+
+
+#login_wrap .login_form .search_info{
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+}
+#login_wrap .login_form .search_info li a{
+  padding:4px 10px;
+}
+#login_wrap .login_form .search_info li:hover a{
+  color:red;
+}
+
+#login_wrap .login_form .search_info li:before{
+  content: '|';
+}
+
+#login_wrap .login_form .search_info li:first-child::before{
+  content: '';
+}
+
+/* signup.html */
+#signup_wrap {
+  position: relative;
+  width:85%;
+  height:85vh;
+  left:15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#signup_wrap>h2{
+  position: absolute;
+  left: 30%;
+  top: 15%;
+  font-size: 3rem;
+}
+
+#signup_wrap .signup_form{
+  width:600px;
+  height: 400px;
+}
+
+#signup_wrap .signup_form form h2{
+  font-size: 2rem;
+  font-weight: bold;
+}
+#signup_wrap .signup_form form input {
+  width:100%;
+  height:50px;
+  color:#000;
+  font-weight: bold;
+  padding-left:15px;
+  font-family: sans-serif;
+  margin-bottom:15px;
+}
+#signup_wrap .signup_form form input[type="submit"]{
+  background: transparent;
+  letter-spacing: 1px;
+}
+#signup_wrap .signup_form form input[type="submit"]:hover{
+  background: #222;
+  color:#fff;
 }
