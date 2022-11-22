@@ -16,7 +16,7 @@
 <body>
   <header>
     <!-- 1. 로고  -->
-    <div id="logo"><a href="index.html"></a></div>
+    <div id="logo" onclick="main()"></div>
 
     <!-- 2. 내비게이션 -->
     <ul id="gnb">
@@ -53,8 +53,8 @@
   <nav>
     <a href="#">소식</a>
     <a href="#">행사</a>
-    <a href="#">로그인</a>
-    <a href="#">회원가입</a>
+    <a href="login.html" style="color:red;">로그인</a>
+    <a href="signup.html" style="color:red;">회원가입</a>
   </nav>
   
   <!-- 로그인 페이지 -->
@@ -70,7 +70,7 @@
       <ul class="search_info">
         <li><a href="#">아이디 찾기</a></li>
         <li><a href="#">비밀번호 찾기</a></li>
-        <li><a href="#">회원가입</a></li>
+        <li><a href="signup.html" style="color:red;">회원가입</a></li>
       </ul>
     </div>
 
@@ -80,6 +80,8 @@
     <i class="fa fa-bars"></i>
     <i class="fa fas fa-question"></i>
   </div>
+
+  <script src="js/common.js"></script>
 </body>
 
 </html>

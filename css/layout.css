@@ -35,6 +35,10 @@ header {
   box-shadow: 1px 1px 2px 0px #555;
 }
 
+#logo {
+  cursor: pointer;
+}
+
 /* nav 상대위치, 높이30px
 너비 85% */
 nav {
@@ -55,6 +59,14 @@ nav {
   left: 15%;
   width: 85%;
 }
+
+/* button style */
+.mo button {
+  padding: 8px;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
 
 /* 모듈 설정
   -가로배치
@@ -280,11 +292,11 @@ nav a:nth-child(4) {
   background-image: url('../images/fuku_4.jpg');
 }
 
-.bg8 {
+.bg10 {
   background-image: url('../images/fuku_5.jpg');
 }
 
-.bg10 {
+.bg8 {
   background-image: url('../images/fuku_6.jpg');
 }
 
@@ -375,6 +387,17 @@ nav a:nth-child(4) {
   background-color: #eee;
   color: #555;
   padding: 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+.mo.m5 .txt:after {
+  content: 'Click!!';
+  position: absolute;
+  right: 58px;
+  bottom: 50px;
+  font-size: 2rem;
+  color: #000;
 }
 
 /* 
@@ -409,13 +432,13 @@ nav a:nth-child(4) {
   */
 .mo:hover .txt {
   background-color: #444444;
-  color: #eee;
+  color: #c8c8c8;
 }
 
 /* 글자색: 흰색 */
 .mo:hover .txt strong,
 .mo:hover .txt em {
-  color: #eee;
+  color: #c8c8c8;
 }
 
 /* m5 글자색:#ff90a3 */
@@ -563,6 +586,7 @@ nav,
     width: 100%;
     height: 80px;
     max-width: 100%;
+    box-shadow:none;
   }
 
   /* nav 제거 */
@@ -677,11 +701,12 @@ nav,
     top: 100px;
     position: relative;
   }
-  #logo:after{
+
+  #logo:after {
     content: 'Fukuoka';
     position: absolute;
-    left:100%;
-    color:#fff;
+    left: 100%;
+    color: #fff;
     font-size: 1rem;
   }
 
@@ -697,9 +722,11 @@ nav,
     margin: 0 auto;
     top: 500px;
   }
-#gnb li:nth-child(4){
-  display: none;
-}
+
+  #gnb li:nth-child(4) {
+    display: none;
+  }
+
   /* 
   float 제거
   너비 100%
@@ -784,101 +811,166 @@ nav,
 /* login.html */
 #login_wrap {
   position: relative;
-  width:85%;
-  height:85vh;
-  left:15%;
+  width: 85%;
+  height: 85vh;
+  left: 15%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#login_wrap .login_form{
-  width:600px;
+
+#login_wrap .login_form {
+  width: 600px;
   height: 400px;
 }
 
-#login_wrap .login_form form h2{
+#login_wrap .login_form form h2 {
   font-size: 3.5rem;
   font-weight: bold;
 }
+
 #login_wrap .login_form form input {
-  width:100%;
-  height:50px;
-  color:#000;
+  width: 100%;
+  height: 50px;
+  color: #000;
   font-weight: bold;
-  padding-left:15px;
+  padding-left: 15px;
   font-family: sans-serif;
-  margin-bottom:15px;
+  margin-bottom: 15px;
 }
-#login_wrap .login_form form input[type="submit"]{
+
+#login_wrap .login_form form input[type="submit"] {
   background: transparent;
   letter-spacing: 1px;
+  cursor: pointer;
 }
-#login_wrap .login_form form input[type="submit"]:hover{
+
+#login_wrap .login_form form input[type="submit"]:hover {
   background: #222;
-  color:#fff;
+  color: #fff;
 }
 
 
-#login_wrap .login_form .search_info{
+#login_wrap .login_form .search_info {
   display: flex;
   justify-content: flex-end;
   text-align: center;
 }
-#login_wrap .login_form .search_info li a{
-  padding:4px 10px;
-}
-#login_wrap .login_form .search_info li:hover a{
-  color:red;
+
+#login_wrap .login_form .search_info li a {
+  padding: 4px 10px;
 }
 
-#login_wrap .login_form .search_info li:before{
+#login_wrap .login_form .search_info li:hover a {
+  color: red;
+}
+
+#login_wrap .login_form .search_info li:before {
   content: '|';
 }
 
-#login_wrap .login_form .search_info li:first-child::before{
+#login_wrap .login_form .search_info li:first-child::before {
   content: '';
 }
 
 /* signup.html */
 #signup_wrap {
   position: relative;
-  width:85%;
-  height:85vh;
-  left:15%;
+  width: 85%;
+  height: 85vh;
+  left: 15%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#signup_wrap>h2{
-  position: absolute;
-  left: 30%;
-  top: 15%;
-  font-size: 3rem;
-}
 
-#signup_wrap .signup_form{
-  width:600px;
+#signup_wrap .signup_form {
+  width: 600px;
   height: 400px;
+  position: relative;
 }
 
-#signup_wrap .signup_form form h2{
-  font-size: 2rem;
+#signup_wrap .signup_form>h2 {
+  position: absolute;
+  top: -100px;
+  left: calc(50% - 100px);
+  font-size: 2.5rem;
+}
+
+#signup_wrap .signup_form form h2 {
+  font-size: 1.25rem;
+  padding-bottom: 10px;
   font-weight: bold;
 }
+
 #signup_wrap .signup_form form input {
-  width:100%;
-  height:50px;
-  color:#000;
+  width: 100%;
+  height: 50px;
+  color: #000;
   font-weight: bold;
-  padding-left:15px;
+  padding-left: 15px;
   font-family: sans-serif;
-  margin-bottom:15px;
+  margin-bottom: 15px;
 }
-#signup_wrap .signup_form form input[type="submit"]{
+
+#signup_wrap .signup_form form input[type="radio"] {
+  height: 25px;
+  width: 25px;
+  margin: 0 10px;
+  margin-bottom: 2rem;
+}
+
+#signup_wrap .signup_form form input[type="submit"] {
   background: transparent;
   letter-spacing: 1px;
 }
-#signup_wrap .signup_form form input[type="submit"]:hover{
+
+#signup_wrap .signup_form form input[type="submit"]:hover {
   background: #222;
-  color:#fff;
+  color: #fff;
+}
+
+#signup_wrap .signup_form form input.phoneNumber {
+  width: 30%;
+}
+
+#signup_wrap .signup_form form #certification,
+#signup_wrap .signup_form form #timeLimit {
+  display: inline-block;
+  font-size: 1.5rem;
+}
+
+#signup_wrap .signup_form form .auth,
+#signup_wrap .signup_form form .timer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#signup_wrap .signup_form form .auth button,
+#signup_wrap .signup_form form .timer button {
+  width: 50%;
+  height: 40px;
+  margin: 1.5rem 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+#signup_wrap .signup_form form .auth button:hover,
+#signup_wrap .signup_form form .timer button:hover {
+  background: black;
+  color: #fff;
+}
+
+#signup_wrap .signup_form form .signup #signUpButton {
+  cursor: pointer;
+  background: transparent;
+  width: 100%;
+  height: 50px;
+  margin: 50px 0 150px 0;
+}
+
+#signup_wrap .signup_form form .signup #signUpButton:hover {
+  background: #000;
+  color: #fff;
 }

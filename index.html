@@ -16,7 +16,7 @@
 <body>
   <header>
     <!-- 1. 로고  -->
-    <div id="logo"><a href="index.html"></a></div>
+    <div id="logo" onclick="main()"></div>
 
     <!-- 2. 내비게이션 -->
     <ul id="gnb">
@@ -53,8 +53,8 @@
   <nav>
     <a href="#">소식</a>
     <a href="#">행사</a>
-    <a href="login.html">로그인</a>
-    <a href="#">회원가입</a>
+    <a href="login.html" style="color:red;">로그인</a>
+    <a href="signup.html" style="color:red;">회원가입</a>
   </nav>
 
   <!-- 컨테이너(컨텐츠 모듈) -->
@@ -69,7 +69,7 @@
     <!-- 모듈2 -->
     <div class="mo m2">
       <div class="bg bg2">
-        <span>Module 2</span>
+        <span>Nightscape</span>
       </div>
     </div>
 
@@ -78,12 +78,12 @@
       <div class="txt">
         <i class="fa fa-hand-o-right"></i>
         <p>
-          <strong>Module 3</strong>
+          <strong>야시장 골목</strong>
           <br>
-          <em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sednobis, accusantium maiores vitae
-            fugaipsa,doloribus eligendi a eumillum minus ab dolor sapiente perferendis praesentium? Ex
-            maximeconsecteturamet!
+          <em>저녁 7시 이후에만 열리는 독특한 야시장 거리 !! 남녀노소 상관없이 다 즐길 수 있는 유명한 관광지, 놀다가 전철 놓치면 어떻게 하냐구요? 걱정 No No~
           </em>
+
+          <button>여행하러가기</button>
         </p>
       </div>
     </div>
@@ -91,7 +91,7 @@
     <!-- 모듈4-->
     <div class="mo m4">
       <div class="bg bg4">
-        <span>Module 4</span>
+        <span>Market</span>
       </div>
     </div>
 
@@ -100,10 +100,14 @@
       <div class="txt">
         <i class="fa fa-spinner fa-spin"></i>
         <p>
-          <strong>Module 5</strong>
+          <strong>일본여행가이드</strong>
           <br>
           <em>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis explicabo, repudiandae, vero libero ipsa voluptate odio dolor reiciendis recusandae optio porro alias iure? Illum voluptatum, eum atque nemo velit quae?
+            일본어 못하셔서 걱정 되신다구요? 걱정하지마세요!! 자신감과 저희가 드리는 단어장 하나면 편안하게 여행을 즐기실 수 있습니다.<br/><br/>
+            이쿠라데스까? -> 얼마인가요?<br/>
+            스미마셍 -> 실례합니다.<br/>
+            잇쇼니 샤신 톳테모 이이데스카?<br/> -> 같이 사진 찍어도 괜찮을까요?<br/>
+            ...
           </em>
         </p>
       </div>
@@ -112,7 +116,7 @@
     <!-- 모듈6-->
     <div class="mo m6">
       <div class="bg bg6">
-        <span>Module 6</span>
+        <span>Blossoms</span>
       </div>
     </div>
 
@@ -121,16 +125,14 @@
       <div class="txt">
         <i class="fa fa-hand-o-right"></i>
         <p>
-          <strong>Module 7</strong>
+          <strong>일본 여행지 추천</strong>
           <br>
           <em>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia maxime odit sapiente delectus tenetur. Ex
-            saepe quis minima, labore exercitationem inventore ipsa quidem necessitatibus at quaerat optio officia
-            aperiam voluptatum?
-            Odit accusantium, est iure, quo a soluta hic praesentium amet explicabo accusamus, repellendus deserunt
-            voluptatem dolorem esse! Iste mollitia atque odio ducimus in necessitatibus, magnam ea eos, expedita
-            corporis voluptas?
+            일본 여행 가고싶은 곳이 너무 많아 어디를 먼저 갈지 모르시겠나요?<br/>
+            가고싶은 목적지를 저희에게 말씀해주세요!!<br/>
+            경로단축 뿐 아니라 중간 중간 즐겨볼 수 있는 볼거리까지 추천해 드립니다.!!...
           </em>
+          <button>여행상담하기</button>
         </p>
       </div>
     </div>
@@ -138,7 +140,7 @@
     <!-- 모듈8-->
     <div class="mo m8">
       <div class="bg bg8">
-        <span>Module 8</span>
+        <span>Camomile</span>
       </div>
     </div>
 
@@ -147,12 +149,12 @@
       <div class="txt">
         <i class="fa fa-hand-o-right"></i>
         <p>
-          <strong>Module 9</strong>
+          <strong>봄의 꽃 벚꽃</strong>
           <br>
           <em>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione obcaecati dolores nobis eligendi corrupti,
-            voluptate accusantium quisquam, laudantium hic, earum facilis quod voluptates nisi odio! Sed, at. Quod,
-            harum eveniet.
+            일본의 꽃하면 생각나는 꽃 벚꽃<br/>
+            벚꽃 개화시기에 맞춰서 오시면 아름다운 벚꽃들을 볼 수 있습니다.<br/>
+            연인, 친구, 가족, 1인여행, 누가 와도 아름다운 추억을 담을 수 있는 벚꽃 여행지 알려드립니다.
           </em>
         </p>
       </div>
@@ -161,7 +163,7 @@
     <!-- 모듈10-->
     <div class="mo m10">
       <div class="bg bg10">
-        <span>Module 10</span>
+        <span>Sakura</span>
       </div>
     </div>
   </div>
@@ -171,6 +173,8 @@
     <i class="fa fa-bars"></i>
     <i class="fa fas fa-question"></i>
   </div>
+
+  <script src="js/common.js"></script>
 </body>
 
 </html>
